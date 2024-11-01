@@ -19,7 +19,7 @@ public class Bai4 {
 		for (int i = 0; i < q; i++) {
 			int l = sc.nextInt();
 			int r = sc.nextInt();
-			System.out.println(prefix[r] - pref[l-1]);
+			System.out.println(prefix[r] - prefix[l-1]);
 		}
 	}
 }

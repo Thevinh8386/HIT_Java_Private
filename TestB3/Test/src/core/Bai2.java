@@ -9,15 +9,16 @@ public class Bai2 {
 		int index = 0;
 		int[] arr = new int[105];
 		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) >= "0" && str.charAt(i) <= 9) {
+			if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
 				arr[index] = str.charAt(i) - '0';
 				index++;
 			}
+			else 
+				System.out.print(str.charAt(i));
 		}
-		
-		for (int i = 0; i < ) {
-			arr[i] = 
+		System.out.println();
+		for (int i = 0; i < index; i++) {
+			System.out.print(arr[i]);
 		}
-		
 	}
 }
