@@ -11,11 +11,11 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		//Khởi tạo mảng
-		books.add(new Book(1, "Book A", "Author A", 1999, "Content A", 150.0));
-        books.add(new Book(2, "Book C", "Author B", 2005, "Content C", 100.0));
-        books.add(new Book(3, "Book D", "Author C", 1989, "Content D", 170.0));
-        books.add(new Book(4, "Book B", "Author D", 2019, "Content B", 200.0));
-        books.add(new Book(5, "Book E", "Author E", 2018, "Content E", 250.0));
+		books.add(new Book(1, "Book A", new Author("Author A"), 1999, "Content A", 150.0));
+        books.add(new Book(2, "Book C", new Author("Author B"), 2005, "Content C", 100.0));
+        books.add(new Book(3, "Book D", new Author("Author C"), 1989, "Content D", 170.0));
+        books.add(new Book(4, "Book B", new Author("Author D"), 2019, "Content B", 200.0));
+        books.add(new Book(5, "Book E", new Author("Author E"), 2018, "Content E", 250.0));
         
         while (true) {
         	System.out.println("\n--- MENU ---");
@@ -67,7 +67,7 @@ public class Main {
     	System.out.print("Nhập tên sách: ");
     	String tenSach = sc.nextLine();
     	System.out.print("Nhập tên tác giả: ");
-        String tenTacGia = sc.nextLine();
+        Author tenTacGia = new Author(sc.nextLine());
         System.out.print("Nhập năm sản xuất: ");
         int namSanXuat = sc.nextInt();
         sc.nextLine(); 
@@ -91,7 +91,7 @@ public class Main {
         		System.out.print("Nhập tên sách mới: ");
         		book.setTenSach(sc.nextLine());
         		System.out.print("Nhập tên tác giả mới: ");
-        		book.setTenTacGia(sc.nextLine());
+        		book.getTenTacGia().setName(sc.nextLine());
         		System.out.print("Nhập năm sản xuất mới: ");
         		book.setNamSanXuat(sc.nextInt());
         		sc.nextLine();

@@ -3,7 +3,7 @@ package Homework;
 public class Book {
 	private int maSach;
 	private String tenSach;
-	private String tenTacGia;
+	private Author tenTacGia;
 	private int namSanXuat;
 	private String tomTatNoiDung;
 	private double giaTien;
@@ -12,11 +12,11 @@ public class Book {
 	public Book() {
 	}
 
-	public Book(int maSach, String tenSach, String tenTacGia, 
+	public Book(int maSach, String tenSach, Author tenTacGia,
 			int namSanXuat, String tomTatNoiDung, double giaTien) {
 		this.maSach = maSach;
 		this.tenSach = tenSach;
-		this.tenTacGia = tenTacGia;
+		this.tenTacGia = new Author(tenTacGia);
 		this.namSanXuat = namSanXuat;
 		this.tomTatNoiDung = tomTatNoiDung;
 		this.giaTien = giaTien;
@@ -31,7 +31,7 @@ public class Book {
 		return tenSach;
 	}
 
-	public String getTenTacGia() {
+	public Author getTenTacGia() {
 		return tenTacGia;
 	}
 
@@ -56,7 +56,7 @@ public class Book {
 		this.tenSach = tenSach;
 	}
 
-	public void setTenTacGia(String tenTacGia) {
+	public void setTenTacGia(Author tenTacGia) {
 		this.tenTacGia = tenTacGia;
 	}
 
@@ -80,6 +80,6 @@ public class Book {
 	
     // Display method
     public void display() {
-    	System.out.println(this.toString());
+    	System.out.println(toString());
     }
 }
